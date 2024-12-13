@@ -1,0 +1,53 @@
+Anotações Java Script
+
+Tipos primitivos de dados:
+
+-String: São textos colocados entre aspas. 
+Ex: "casa";
+
+-Number: São valores numericos.
+Ex: 123;
+
+-Boolean: Valor Verdadeiro ou falso.
+Ex: False; true;
+
+Variaveis e contantes:
+
+-Variaveis: São repositorios que podem ter seus valores alterados a qualquer momento.
+Ex: var populacao_brasil = 207391930; <-Esse valor pode ser alterado ao passar do tempo.
+
+-Constantes: São repositorios que tem seus valores fixos.
+Ex: const UMA_HORA = 60; <-Esse valor é fixo nunca será alterado. 
+
+Formas de adicionar o JavaScript ao documento:
+							Inline\/
+-Inline: <img id="lampada" src="img/apagada.jpg" onclick="acender()" />
+
+incorporado: 
+<script type="text/javascript">
+
+function comprimento() {
+	alert("Oi, como você está?");
+}
+
+</script>
+
+Externo: <script type="text/javascript" src="js/incorporar.js"></script>
+
+Operadores:
+
+°Operador e Operando;
+°Lista de Operadores;
+°Denominaçãp (Binário, Unário, Ternário);
+°Conversão de Dados;
+°Precedência;
+°Tipos.
+	-Matematicos;
+	-De Comparação;
+	-Lógicos;
+	-De bits;
+	-De atribuição;
+	-Especiais.
+
+
+

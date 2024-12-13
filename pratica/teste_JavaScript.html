@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<script type="text/javascript">
+function calculo(){
+	//Receber quantidade de pirulitos.
+	var numero_pir = Number(document.getElementById('num_pir').value);
+	//Receber quantidade de crianças.
+	var numero_cria = Number(document.getElementById('num_cria').value);
+	//Dividir pirulitos para as crianças.
+	
+	if (numero_pir > numero_cria) {
+	var resultado_divisao = numero_pir / numero_cria;
+	//Calcular quantos pirulitos vão sobrar.
+	var sobra = numero_pir % numero_cria;
+
+	//Imprimir quantidade de pirulitos para cada criança. 
+	document.getElementById('piruli_cad').innerHTML = parseInt(resultado_divisao);
+
+	//Imprimir quantidade de pirulitos que sobrará.
+	document.getElementById('sobra_pir').innerHTML =  sobra;
+	}
+}
+</script>
+
+Quantidade de pirulitos: <input type="number" id="num_pir" name="num_pir_n" /><br /><br />
+Quantidade de crianças: <input type="number" id="num_cria" name="num_cria_n" /><br />
+<input type="button" name="calc" value="Calcular" onclick="calculo()" /><br /><br />
+Cada criança receberá <span id="piruli_cad">0</span> pirulitos e sobrará <span id="sobra_pir">0</span> pirulitos.
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nome e Idade</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function nome_idade() {
+			//Receber Nome.
+			var nome = document.getElementById("nome_usu").value;
+			//Receber Ano de Nascimento
+			var ano_nasci = Number(document.getElementById("ano_nasc").value);
+			//Pegar data Atual.
+			var data = new Date();
+			var ano_atual = Number(data.getFullYear());
+			//Fazer calculo da idade.
+			var idade = ano_atual - ano_nasci;
+
+			//Imprimir nome e idade.
+			var imp_nome_idade = nome + " tem " + idade + " anos.";
+			document.getElementById("escrever").innerHTML = imp_nome_idade;
+		}
+	</script>
+</head>
+<body>
+<table border="0">
+<thead>
+	<tr>
+		<th colspan="2">Nome e Idade</th>
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nome:</td> 
+<td><input type="text" name="nom" id="nome_usu" placeholder="Nome Completo." /></td>
+</tr>
+<tr>
+<td>Ano de Nascimento:</td> 
+<td><input type="number" name="ano_n" id="ano_nasc" placeholder="Somento o Ano." /></td>
+</tr>
+<tr>
+<td colspan="2"><input type="button" name="concl" id="ok" value="OK" onClick="nome_idade()" /></td>
+</tr>
+<tr>
+<td colspan="2"><p id="escrever"></p></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

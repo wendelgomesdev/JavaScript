@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		//Criando Arrays.
+		/*Forma 1
+		var frutas = ["Maça", "Banana", "Goiaba"], "Laranja", "Uva";
+
+		console.log(frutas);
+		*/
+
+		/*forma 2
+		var frutas = [];
+
+		frutas[0] = "Maça";
+		frutas[1] = "Banana";
+		frutas[2] = "Goiaba";
+		frutas[3] = "Laranja";
+		frutas[4] = "Uva";
+
+		console.log(frutas);
+		*/
+
+		/*forma 3
+		var frutas = [];
+
+		frutas.push("Banana");
+		frutas.push("Laranja");
+		frutas.push("Manga");
+		
+		console.log(frutas);
+		*/
+
+		/*forma 4
+		var frutas = new Array("Uva", "Pera", "Banana");
+
+		//adicionando no final
+		frutas.push("Manga");
+		console.log(frutas);
+
+		//adicionanco no começo
+		frutas.unshift("Abacaxi");
+		*/
+
+		/*
+		var frutas = new Array("Uva", "Pera", "Banana");
+		//Remove de acordo com a posição desejada
+		frutas.splice(apartir, até);
+		console.log(frutas);
+		*/
+		var frutas = [];
+		
+		
+			function cad_fruta() {
+				//Verificar se o campo foi preenchido.
+				var verifc_campo = document.getElementById("env_fruta").value;
+				if (verifc_campo != "") {
+				var fruta_vari = "<p>" + document.getElementById("env_fruta").value + "</p>";
+					
+				frutas.push(fruta_vari);
+
+				var recb_frut = frutas.toString();
+
+				document.getElementById("frutas_receb").innerHTML = recb_frut.replace(/,/g, "");
+				document.getElementById("env_fruta").value = "";
+
+				console.log(frutas);
+				}
+			}
+
+			function remov_frut(){
+				//Remover o ultimo.
+				frutas.pop();
+
+				var recb_frut = frutas.toString();
+				document.getElementById("frutas_receb").innerHTML = recb_frut.replace(/,/g, "");
+				document.getElementById("env_fruta").value = "";
+
+			}
+
+			function OnEnter(evt){
+		    var key_code = evt.keyCode  ? evt.keyCode  :
+		                       evt.charCode ? evt.charCode :
+		                       evt.which    ? evt.which    : void 0;
+		 
+		 
+		    if (key_code == 13)
+		    {
+		        return true;
+		    }
+		}
+
+		function EnviaFormulario(e){
+		    if(OnEnter(e))
+		    {
+		       cad_fruta();
+		        return false;
+		    }
+		    else
+		    {
+		        return true;
+		    }
+		}
+		
+	</script>
+</head>
+<body>
+<div>
+	<input type="text" onkeypress="return EnviaFormulario(event);" name="frutas_env" id="env_fruta"/>
+	<button onclick="cad_fruta()">ADD</button>
+	<div id="frutas_receb"></div>
+	<br />
+	<button onclick="remov_frut()">Remover</button>
+</div>
+</body>
+</html>

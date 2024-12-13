@@ -1,0 +1,37 @@
+div#cinema {
+	max-width: 95%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#placa {
+	max-width: 570px;
+	max-height: 215px;
+	min-width: 570px;
+	min-height: 215px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%; 
+	background-image: url("../img/cinema_placa.jpg");
+	background-size: 100%;
+	background-position-x: 50%;
+	background-position-y: 50%;
+}
+
+div#cinema .placa_cinema {
+	max-width: 100%;
+}
+
+div#fila_poltronas {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+div#cinema .poltronas {
+	max-width: 10%;
+	height: auto; 
+	margin-right: auto;
+	margin-left: auto;
+}

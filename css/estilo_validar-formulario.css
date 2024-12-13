@@ -1,0 +1,23 @@
+div#formulario {
+	max-width: 20%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#caixa_fosforo .placa_cinema {
+	max-width: 100%;
+}
+
+div#fileira_fosforos {
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+div#caixa_fosforo .palitos {
+	max-width: 10%;
+	height: auto; 
+	margin-right: auto;
+	margin-left: auto;
+}

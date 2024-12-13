@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/calcular_imc.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilo_calc_imc.css" />
+</head>
+<body>
+<div id="cal_imc_painel">
+<img src="img/emblema_imc.png" />
+<fieldset>
+	<legend>Calcular o IMC</legend>
+	<table>
+		<form id="formulario">
+			<tr><td>Kilos: </td> <td><input type="number" name="kl" /></td></tr>
+			<tr><td>Metros: </td><td><input type="number" name="mt" /></td></tr>
+			<tr><td>Cm: </td> <td><input type="number" name="cm" /></td></tr>
+			<tr><td>IMC: </td><td><input type="number" name="imc" disabled="disabled" /></td></tr>
+			<tr><td colspan="2"><a href="#" onclick="calcular_imc();">Calcular</a></td></tr>
+			<tr><td colspan="2"><input type="text" name="classificacao" disabled="disabled" /></td></tr>
+		</form>
+	</table>
+</fieldset>
+</div>
+</body>
+</html>
