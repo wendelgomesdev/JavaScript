@@ -1,7 +1,7 @@
-lista_de_nomes = ['Wendel', 'Itagiane', 'Lucas', 'Carlos']
+let lista_de_nomes = ['Wendel', 'Itagiane', 'Lucas', 'Carlos']
 
 function exibir(){
-    var lista = document.getElementById('lista');
+    let lista = document.getElementById('lista');
 
     for (let i = 0; i < lista_de_nomes.length; i++) {
         let item = document.createElement("li");
@@ -10,4 +10,3 @@ function exibir(){
     }
     
 }
-

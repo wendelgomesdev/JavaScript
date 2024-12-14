@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/modificando_html.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="area">
+        Bem vindo!
+    </div>
+    <button onclick="document.getElementById('area').innerHTML = 'Bem vindo, ' + prompt('Qual seu nome?');">Entrar</button>
+    <button onclick="this.innerHTML = prompt('Digite aqui o nome do botão');">Qual o nome do botão?</button>
+    <button onclick="minhaFuncao()">Chamar função!</button>
+</body>
+</html>
