@@ -3,23 +3,23 @@
 	Descrição: Spread operator. 
 */
 
-function minha_lista(...nomes){
+function minhaLista(...nomes){
 	alert(nomes);
 }
 
-minha_lista('Matheus', 'Astolfo', 'Rodolfo', 'Maria');
+minhaLista('Matheus', 'Astolfo', 'Rodolfo', 'Maria');
 
 
-function minha_lista_frutas(frutas, ...novasfrutas){
-	let todas_frutas = [
+function minhaListaFrutas(frutas, ...novasfrutas){
+	let todasFrutas = [
 		...frutas,
 		...novasfrutas
 	];
 
-	return todas_frutas;
+	return todasFrutas;
 }
 
 let frutas = ['Banana', 'Maça', 'Laranja'];
 
-let todas_frutas = minha_lista_frutas(frutas, 'Goiaba', 'Manga', 'Pera')
+let todasFrutas = minhaListaFrutas(frutas, 'Goiaba', 'Manga', 'Pera')
 
