@@ -1,6 +1,6 @@
 /*
 	Autor: Wendel Gomes Silva
-	Descrição: RegExp - Funçoes.
+	Descrição: Funçoes anonimas.
 */
 
 //Ao carregar o documento associar função ao elemento desejado.
