@@ -4,11 +4,11 @@
 */
 
 //Usando em um array
-let primeiros_numeros = [1,2,3];
+let primeirosNumeros = [1,2,3];
 
-let todos_numeros = [...primeiros_numeros, 4,5,6];
+let todosNumeros = [...primeirosNumeros, 4,5,6];
 
-alert(todos_numeros)
+alert(todosNumeros)
 
 //Usando em um objeto
 let pessoa = {
@@ -17,7 +17,7 @@ let pessoa = {
 	profissao: 'Empreendedor'
 }
 
-let nova_pessoa = {
+let novaPessoa = {
 	...pessoa,
 	ano_atual: 2050,
 	cidade: 'São Paulo'
