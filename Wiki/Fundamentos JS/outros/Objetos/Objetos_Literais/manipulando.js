@@ -80,3 +80,30 @@ const carro = {
 		return 'Biiiiiiiiiiiiii'
 	}
 }
+
+// Playground
+
+const prod1 = {}
+prod1.nome = 'Celular Ultra Mega Power'
+prod1.preco = 4998.90
+prod1['Desconto Legal'] = 0.40 // evitar atributos com espaço
+
+console.log(prod1)
+
+const prod2 = {
+    nome:'Camisa branca',
+    preco: 200.60
+}
+
+console.log(prod2)
+
+
+
+let pessoa = {
+    nome: 'Wendel',
+    idade: '24',
+    sexo: 'Masculino',
+    endereco: 'R. Antenor Domingues, 29'
+}
+
+console.log(pessoa.idade)
