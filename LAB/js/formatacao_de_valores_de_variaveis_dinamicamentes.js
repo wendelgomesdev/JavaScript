@@ -197,12 +197,12 @@ userContext.user123 = {
     menu: {
         globalVariables: menu.globalVariables,
         variables: {
-            nome: 'wendel'
+            remoteJid: 'wendel'
         }
     }
 }
 
-function getVariables(user, menu) {
+function setVariables(user, menu) {
     if (menu.variables) {
         userContext[user].menu.variables = {
             ...userContext[user].menu.variables,
