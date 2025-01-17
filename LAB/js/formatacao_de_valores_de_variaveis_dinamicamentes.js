@@ -1,4 +1,4 @@
-let userContext = {}
+const userContext = {}
 
 const menu = {
     globalVariables: {
@@ -196,9 +196,23 @@ const menu = {
 userContext.user123 = {
     menu: {
         globalVariables: menu.globalVariables,
-        variables: {}
+        variables: {
+            nome: 'wendel'
+        }
     }
 }
+
+function getVariables(user, menu) {
+    if (menu.variables) {
+        userContext[user].menu.variables = {
+            ...userContext[user].menu.variables,
+            ...menu.variables
+        }
+    }
+}
+
+getVariables('user123', menu.DescreverNoticiaCT);
+//console.log(userContext.user123);
 
 function traverseObject(obj, callback) {
     if (typeof obj !== 'object' || obj === null) return obj;
