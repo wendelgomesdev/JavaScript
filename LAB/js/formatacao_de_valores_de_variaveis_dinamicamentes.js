@@ -1,8 +1,3 @@
-const variaveis = {
-    nome: 'Wendel',
-    telefone: '1195678-2312',
-};
-
 let userContext = {}
 
 const menu = {
@@ -198,9 +193,12 @@ const menu = {
     }
 };
 
-userContext['user123'.menu.globalVariables = menu.globalVariables
-    
-console.log(userContext);
+userContext.user123 = {
+    menu: {
+        globalVariables: menu.globalVariables,
+        variables: {}
+    }
+}
 
 function traverseObject(obj, callback) {
     if (typeof obj !== 'object' || obj === null) return obj;
@@ -231,26 +229,6 @@ function processObjectVariables(obj, variables) {
 }
 
 // Exemplo de uso
-const processedMenu = processObjectVariables(menu, variaveis);
+const processedMenu = processObjectVariables(menu.enviarNoticiaDestino, userContext.user123.menu.variables);
 
 console.log(processedMenu);
-
-function replaceDynamicVariables(input, variables) {
-    if (typeof input !== 'string') return input; // Retorna valores não string sem processamento
-    // Procura por {{variavel}} no template e substitui pelos valores correspondentes
-    return input.replace(/\{\{(.*?)}\}/g, (_, key) => {
-        // Remove espaços desnecessários e busca no objeto de variáveis
-        const value = variables[key.trim()];
-        return value !== undefined ? value : `{{${key.trim()}}}`; // Mantém o placeholder se não encontrar valor
-    }
-    );
-}
-
-// Substitui variáveis em todas as chaves do menu
-const processedMenu = {};
-for (const [key, value] of Object.entries(menu)) {
-    processedMenu[key] = processDynamicVariables(value);
-}
-
-console.log(processDynamicVariables(input, variaveis));
-
