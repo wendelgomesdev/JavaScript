@@ -9,6 +9,12 @@ const menu = {
     },
     mainMenu: {
         message: 'Digite o número da opção desejada:\n',
+        variables: {
+            FinalDestination: '120363377627253338@g.us',
+            finalDestinationSubject: '*Acontecimento na Cidade Tiradentes.*\n\n',
+            noticiaDescricao: '{{stepTextOption.content}}',
+            teste: 'Estou aqui'
+        },
         options: {
             1: {
                 nextStep: 'selecionarBairroComercio',
@@ -197,14 +203,12 @@ const menu = {
 userContext.user123 = {
     menu: {
         globalVariables: menu.globalVariables,
-        variables: {
-            teste: 'Variavel teste!'
-        }
+        variables: {}
     }
 }
 
-function setVariables(user, menu) {
-    if (menu.variables) {
+function setVariables(userContext, user, menu) {
+    if (menu.hasOwnProperty('variables')) {
         userContext[user].menu.variables = {
             ...userContext[user].menu.variables,
             ...menu.variables
@@ -212,8 +216,8 @@ function setVariables(user, menu) {
     }
 }
 
-setVariables('user123', menu.DescreverNoticiaCT);
-//console.log(userContext.user123);
+setVariables(userContext, 'user123', menu.mainMenu);
+console.log('Variaveis do usuario: ' + JSON.stringify(userContext.user123.menu.variables, null, 2));
 
 function traverseObject(obj, callback) {
     if (typeof obj !== 'object' || obj === null) return obj;
@@ -246,4 +250,4 @@ function processObjectVariables(obj, variables) {
 // Exemplo de uso
 const processedMenu = processObjectVariables(menu.DescreverNoticiaCT, userContext.user123.menu.variables);
 
-console.log(processedMenu);
+console.log('Menu: ' + JSON.stringify(processedMenu, null, 4));
