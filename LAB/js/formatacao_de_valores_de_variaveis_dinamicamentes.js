@@ -47,7 +47,8 @@ const menu = {
         variables: {
             FinalDestination: '120363377627253338@g.us',
             finalDestinationSubject: '*Acontecimento na Cidade Tiradentes.*\n\n',
-            noticiaDescricao: '{{stepTextOption.content}}'
+            noticiaDescricao: '{{stepTextOption.content}}',
+            teste2: '{{teste}}'
         },
         message: 'Preciso que você descreva o que aconteceu com detalhes.\n\n *Obs: Não se esqueça de informar também o local, por favor (nome da rua, ponto de referência, etc.).*',
         responseMessage: 'Muito bem, anotei o ocorrido aqui.',
@@ -197,7 +198,7 @@ userContext.user123 = {
     menu: {
         globalVariables: menu.globalVariables,
         variables: {
-            remoteJid: 'wendel'
+            teste: 'Variavel teste!'
         }
     }
 }
@@ -211,7 +212,7 @@ function setVariables(user, menu) {
     }
 }
 
-getVariables('user123', menu.DescreverNoticiaCT);
+setVariables('user123', menu.DescreverNoticiaCT);
 //console.log(userContext.user123);
 
 function traverseObject(obj, callback) {
@@ -243,6 +244,6 @@ function processObjectVariables(obj, variables) {
 }
 
 // Exemplo de uso
-const processedMenu = processObjectVariables(menu.enviarNoticiaDestino, userContext.user123.menu.variables);
+const processedMenu = processObjectVariables(menu.DescreverNoticiaCT, userContext.user123.menu.variables);
 
 console.log(processedMenu);
