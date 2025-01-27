@@ -1,6 +1,6 @@
 const condition = eval("'ok' === 'ok'");
 
-console.log(condition);
+console.log('resultado: ', condition);
 
 if (condition){
     console.log('ok');
