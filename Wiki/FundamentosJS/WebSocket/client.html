@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Variable Update</h1>
+    <p>Value: <span id="variable">Loading...</span></p>
+
+    <script>
+        // Conecta ao WebSocket do servidor
+        const ws = new WebSocket('ws://localhost:9090');
+
+        // Elemento para renderizar o valor
+        const variableElement = document.getElementById('variable');
+
+        // Escuta mensagens do servidor
+        ws.onmessage = (event) => {
+            try {
+                // Parse da mensagem recebida
+                const data = JSON.parse(event.data);
+                // Atualiza o conteúdo da página
+                variableElement.textContent = data.value;
+            } catch (error) {
+                console.error('Error parsing message', error);
+            }
+        };
+
+        ws.onopen = () => console.log('WebSocket connected');
+        ws.onclose = () => console.log('WebSocket disconnected');
+        ws.onerror = (error) => console.error('WebSocket error', error);
+    </script>
+</body>
+</html>
