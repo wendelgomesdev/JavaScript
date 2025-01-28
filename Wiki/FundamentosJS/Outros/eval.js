@@ -6,3 +6,5 @@ if (condition){
     console.log('ok');
 }
 
+console.log(eval("['ok', 'certo', 'sim', 'positivo', 'finalizar'].includes('Ok'.toLowerCase())"));
+

@@ -42,3 +42,13 @@ for (let [key, value] of Object.entries(pessoas)){
 }
 console.log(' ')
 console.log('=============')
+
+// como obter a primeira chave de um objeto
+const objeto_teste = {
+    teste: {
+        teste2: 'testando2'
+    }
+    
+};
+
+console.log(Object.keys(objeto_teste)[0]);
