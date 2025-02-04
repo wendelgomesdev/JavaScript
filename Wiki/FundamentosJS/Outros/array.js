@@ -1,6 +1,6 @@
 let lista_de_nomes = ['Wendel', 'Itagiane', 'Lucas', 'Carlos']
 
-function exibir(){
+function exibir() {
     let lista = document.getElementById('lista');
 
     for (let i = 0; i < lista_de_nomes.length; i++) {
