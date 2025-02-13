@@ -10,8 +10,7 @@ function acao(){
 // Executar de tempo em tempo
 setInterval(acao, 1000);
 
-// Executar apó um tempo determinado
-setTimeout(acao, 2000);
+
 
 window.onload = function () {
 	setInterval(rolar_segundos, 1000);
